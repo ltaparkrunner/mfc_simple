@@ -36,10 +36,14 @@ public:
 #endif
 
 protected:
-
+	bool m_bDrawing;
 // Созданные функции схемы сообщений
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 };
 
 #ifndef _DEBUG  // версия отладки в mfc_simpleView.cpp
